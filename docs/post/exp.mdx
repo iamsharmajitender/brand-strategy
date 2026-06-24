@@ -1,0 +1,101 @@
+---
+sidebar_position: 50
+slug: EXP
+title: EXP
+description: Template for simplifying complex ideas without losing truth.
+---
+
+# EXP — Explain
+
+**Core question:** How do I explain this without losing truth?
+
+Use this voice when the topic is dense, jargon-heavy, or widely misunderstood. Your job is to make it accessible to a smart audience — not to oversimplify or hide nuance.
+
+:::info[Insight + LinkedIn]
+Each Insight uses **one primary voice**. The paired **LinkedIn voice post** uses the **same voice** and **same tags** — one post per Insight, shorter format, link back to site.
+:::
+
+## When to use EXP
+
+- The topic has too much jargon or conflicting definitions
+- Smart readers are confused, not beginners
+- You need to translate complexity into a clear mental model
+
+## Structure
+
+Follow this flow in order:
+
+1. **What people get wrong** — The common simplification or misconception
+2. **The simple truth** — One sentence that captures the real idea
+3. **The mental model** — An analogy, diagram, or framing that sticks
+4. **What you must not lose** — The nuance that separates accuracy from oversimplification
+5. **What to do with this** — One practical takeaway
+
+## Template
+
+Copy this block and replace the bracketed placeholders:
+
+```text
+Most explanations of [topic] stop at [oversimplified version].
+
+That's useful, but incomplete.
+
+The simple truth:
+[One clear sentence that captures the real idea]
+
+Think of it like this:
+[Mental model or analogy]
+
+What you must not lose:
+* [Nuance 1]
+* [Nuance 2]
+
+What to do with this:
+[Practical takeaway]
+```
+
+## Examples
+
+### Example 1 — RAG
+
+> Most explanations of RAG stop at "add a vector database and retrieve relevant chunks."
+>
+> That's useful, but incomplete.
+>
+> **The simple truth:** RAG is a retrieval layer — it finds information. It does not decide what is true, allowed, or authoritative.
+>
+> **Think of it like this:** RAG is a research assistant, not a judge. It brings documents to the table. Something else must decide what counts.
+>
+> **What you must not lose:**
+>
+> - Retrieval quality ≠ answer correctness
+> - Similarity ≠ truth
+> - Access ≠ authority
+>
+> **What to do with this:** Treat RAG as an input stage. Put validation, policy, and identity upstream or downstream — not inside the retrieval step.
+
+### Example 2 — Agents
+
+> Most explanations of AI agents stop at "give the model tools and let it act."
+>
+> That's useful, but incomplete.
+>
+> **The simple truth:** An agent is a planner that proposes actions. Execution, permission, and audit still belong to the system.
+>
+> **Think of it like this:** An agent is a project manager, not a contractor. It coordinates work. It should not unilaterally sign contracts.
+>
+> **What you must not lose:**
+>
+> - Autonomy without boundaries is risk
+> - Tool access is a permission problem, not a model problem
+> - Every action needs a trace
+>
+> **What to do with this:** Design the agent as one layer in a governed stack — not as a standalone decision-maker.
+
+## Pre-publish checklist
+
+- [ ] Names the oversimplification you are correcting
+- [ ] Delivers one clear "simple truth" sentence
+- [ ] Includes a mental model the reader can remember
+- [ ] Explicitly preserves nuance — what not to lose
+- [ ] Ends with something actionable, not just conceptual

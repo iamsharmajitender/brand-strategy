@@ -1,0 +1,8 @@
+{
+  "label": "Preview",
+  "position": 200,
+  "link": {
+    "type": "generated-index",
+    "description": "Area to poreview the generated content"
+  }
+}

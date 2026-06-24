@@ -1,0 +1,51 @@
+---
+sidebar_position: 35
+slug: Example
+title: Example
+description: Worked playbook example — Build Enterprise RAG for jitendersharma.dev/playbooks.
+---
+
+# Playbook Example
+
+Worked example for playbooks. Planning block and structure → [Template](./Template) · catalog → [Types](./Types).
+
+---
+
+## Worked example — Build Enterprise RAG
+
+Live at [/playbooks/build-enterprise-rag](https://jitendersharma.dev/playbooks/build-enterprise-rag):
+
+| | |
+| --- | --- |
+| **Route** | `/playbooks/build-enterprise-rag` |
+| **Dominant pillar** | **G** (Grounded) |
+| **Prerequisite** | RAG pipeline Insight · [RAG Architecture](https://jitendersharma.dev/blueprints/rag-architecture) blueprint |
+
+**Subtitle:** A step-by-step playbook to build production-ready RAG systems at scale.
+
+**Implementation roadmap:**
+
+| Stage | Step | Outcome |
+| --- | --- | --- |
+| 1 | Define the Use Case | Problem, audience, and success metrics locked |
+| 2 | Data Ingestion | Collect, clean, structure, classify source documents |
+| 3 | Index & Retrieval | Indexes built · retrieval tuned · access control applied |
+| 4 | Generation Layer | LLMs integrated with grounded, policy-scoped context |
+| 5 | Evaluation & Monitoring | Quality, latency, cost, drift measured |
+| 6 | Operate & Improve | Feedback loops · re-embed · rollback paths |
+
+**Key practices:**
+
+- **Start with evaluation criteria** — define "good" before choosing vector DB or model.
+- **Instrument from day one** — log every query, retrieval set, policy decision, generation.
+- **Iterate on retrieval first** — most RAG failures are retrieval problems, not prompts.
+
+**Do not:**
+
+- Ship without identity-scoped retrieval in regulated environments
+- Treat similarity score as confidence
+- Skip shadow mode before full rollout
+
+**Exit criteria (Stage 3):** Retrieval recall measured on eval set · P95 latency within SLO · access control verified on test identities.
+
+**Related:** [Playbook Engine](./Overview) · [Types](./Types) · [Template](./Template) · [Blueprint Engine](../blueprint/Overview)

@@ -1,0 +1,52 @@
+---
+sidebar_position: 35
+slug: Example
+title: Example
+description: Worked blueprint examples — Decision Model and RAG Architecture for jitendersharma.dev/blueprints.
+---
+
+# Blueprint Example
+
+Worked examples for blueprints. Planning block and structure → [Template](./Template) · catalog → [Types](./Types).
+
+---
+
+## Worked example — Decision Model
+
+IP blueprint #1 (Week 6 anchor):
+
+| | |
+| --- | --- |
+| **Route** | `/blueprints/decision-model` |
+| **Prerequisite** | Decision Model: when to use RAG vs Fine-tuning vs Agents vs MCP |
+| **G.A.I.N pillar** | **I** (Intelligent) |
+| **Form** | Decision tree |
+
+**Layers / decisions:**
+
+1. Is the knowledge stable and document-bound? → **RAG**
+2. Is behavior adaptation required on proprietary data? → **Fine-tuning** (with guardrails)
+3. Does the task require multi-step tool use with policy gates? → **Agents**
+4. Is the integration surface tools/APIs across systems? → **MCP**
+
+**Key decisions:**
+
+- Default to RAG + prompts before fine-tuning in regulated environments
+- Agents require a policy layer before tool execution
+- MCP is an integration pattern, not a replacement for governance
+
+---
+
+## Worked example — RAG Architecture
+
+Live at [/blueprints/rag-architecture](https://jitendersharma.dev/blueprints/rag-architecture):
+
+| Layer | Responsibility |
+| --- | --- |
+| **Ingestion** | Source connectors, parsing, chunking, metadata |
+| **Indexing** | Embeddings, vector store, versioning |
+| **Retrieval** | Query, filter by identity/policy, top-k, re-rank |
+| **Generation** | Context pack, LLM call, citation |
+| **Governance** | Access control, audit, eval hooks |
+
+**Related:** [Blueprint Engine](./Overview) · [Types](./Types) · [Template](./Template) · [Gain Engine](../gain/Overview)

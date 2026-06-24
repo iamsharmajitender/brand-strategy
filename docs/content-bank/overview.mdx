@@ -1,0 +1,106 @@
+---
+sidebar_position: 10
+slug: Overview
+title: Overview
+description: Content planning hub — what belongs in Insights, G.A.I.N, Blueprints, Playbooks, and the 12-week plan.
+---
+
+# Content Engine
+
+The Content Engine is your **strategic asset library** — every topic you might write about over the next 12–24 months.
+
+:::tip[How this connects]
+**Content Bank** (2 Insights/week + assets) → **12 Weeks Plan** → **Insight Engine** (publish Insights) · **Post Engine** (one LinkedIn post per Insight)
+:::
+
+**Insights** → one Core pillar · one primary voice slug · one or more topic slugs · **[Tagging Guidelines](./tagging-guide/Tagging-Guidelines-for-Insights)**.
+
+**G.A.I.N · Blueprint · Architecture · Playbook** → one Core pillar · one or more topic slugs (no voice) · **[Content Bank](./Content-Bank)** · rules → **[Tagging Guidelines](./tagging-guide/Tagging-Guidelines-for-Insights)**
+
+---
+
+## What goes where
+
+Five content types on [jitendersharma.dev](https://jitendersharma.dev). Each has a different job — do not mix channels (e.g. a Signature Article is **not** an Insight).
+
+| Asset | Route | What goes in it | Tagging | When to ship |
+| --- | --- | --- | --- | --- |
+| **Insight** | `/insights` | Proof — one argument per piece. **Default single-tension** (~1000–1500 words, route depth down); **anchor** flagship on IP weeks. `pov` · `lrn` · `arch` · `exp`. | **Yes** — Core pillar · voice slug · topic slug(s) → [Tagging Guidelines](./tagging-guide/Tagging-Guidelines-for-Insights) | **2/week** (Tue + Thu) · [Content Bank](./Content-Bank#master-content-bank) |
+| **G.A.I.N** | `/frameworks` | **Core framework** — Governed AI-Native Systems operating model (G · A · I · N loop). **Signature Articles** — standalone domain pieces (LLM · RAG · Agents · MCP · Prompt · Evaluation · Observability · Identity) each explaining the topic **through G.A.I.N**. | **Yes** — Core pillar · topic slug(s) (no voice) → [Tagging Guidelines](./tagging-guide/Tagging-Guidelines-for-Insights) | One Signature Article at a time · [G.A.I.N catalog](../gain/Types#gain-signature-articles) |
+| **Blueprint** | `/blueprints` | **How to model** — visual reference (decision trees, layer diagrams, flows) | **Yes** — Core pillar · topic slug(s) (no voice) | After G.A.I.N or anchor Insight · [Blueprints](../blueprint/Types) |
+| **Architecture** | `/architecture` | **How to architect** — durable systems notes, flows, contracts | **Yes** — Core pillar · topic slug(s) (no voice) | After blueprint for the same topic · [Architecture Engine](../architecture/Overview) |
+| **Playbook** | `/playbooks` | **How to build** — step-by-step implementation | **Yes** — Core pillar · topic slug(s) (no voice) | Last in stack · [Content Bank](./Content-Bank#master-content-bank) |
+
+### How they stack
+
+```mermaid
+flowchart LR
+    INS["Insight<br/>Tagged proof · cadence content<br/>/insights"]
+
+    subgraph publish["Publish"]
+        LI["LinkedIn voice post<br/>Same tags · shorter · link back"]
+    end
+
+    subgraph depth["Depth stack"]
+        direction LR
+        GAIN["G.A.I.N optional<br/>Domain through G.A.I.N<br/>/frameworks/gain-*"]
+        BP["Blueprint<br/>How to model<br/>/blueprints"]
+        ARCH["Architecture note<br/>How to architect<br/>/architecture"]
+        PB["Playbook<br/>How to build<br/>/playbooks"]
+        GAIN --> BP --> ARCH --> PB
+    end
+
+    INS -->|one-to-one| LI
+    INS --> GAIN
+
+    classDef insight fill:#dbeafe,stroke:#93c5fd,color:#1e293b
+    classDef social fill:#e0e7ff,stroke:#a5b4fc,color:#1e293b
+    classDef gain fill:#ede9fe,stroke:#c4b5fd,color:#1e293b
+    classDef blueprint fill:#fef3c7,stroke:#fcd34d,color:#1e293b
+    classDef arch fill:#ffedd5,stroke:#fdba74,color:#1e293b
+    classDef playbook fill:#dcfce7,stroke:#86efac,color:#1e293b
+
+    class INS insight
+    class LI social
+    class GAIN gain
+    class BP blueprint
+    class ARCH arch
+    class PB playbook
+
+    style publish fill:#f8fafc,stroke:#94a3b8,color:#1e293b
+    style depth fill:#f8fafc,stroke:#94a3b8,color:#1e293b
+```
+
+:::info[G.A.I.N is optional]
+Not every topic needs a Signature Article. When there is no G.A.I.N piece, route **Insight depth** straight to **Blueprint**.
+:::
+
+**One-pane view:** [Content Bank → Master content bank](./Content-Bank#master-content-bank)
+
+**Rules of thumb**
+
+- **Insight** = one tension, route depth down — single-tension by default; anchor on IP weeks.
+- **G.A.I.N** = optional — domain reference through the framework; not every topic needs one.
+- **Blueprint** = how to model — one-page visual the advisor cites.
+- **Architecture** = how to architect — systems depth Insights do not repeat.
+- **Playbook** = how to build — ship last; link back up the stack.
+
+**Depth-first rule:** an Insight only links down once its sibling in the stack is live or drafted the same cycle.
+
+Core framework at [/frameworks](https://jitendersharma.dev/frameworks) is the **spine** — every Insight, Signature Article, blueprint, and playbook links back to G.A.I.N.
+
+---
+
+## Pages in this section
+
+- **[Tagging guide](./tagging-guide/Tagging-Guidelines-for-Insights)** — asset-type tagging rules and workflows
+- **[Core Pillars](./tagging-guide/core-pillars)** — four domain slugs
+- **[Topic Tags](./tagging-guide/topic-tags)** — seventeen cross-cutting topic slugs
+- **[Voice Tags](./tagging-guide/voice-tags)** — four primary voices (Insights only)
+- **[Content Bank](./Content-Bank)** — [Master content bank](./Content-Bank#master-content-bank)
+- **[G.A.I.N](../gain/Types)** — pillars · Signature Article catalog · build track → Gain Engine
+- **[Template](../gain/Template)** · **[Example](../gain/Example)** — planning template · worked example · publish checklist
+- **[Blueprints](../blueprint/Types)** — reference models and IP launch sequence → Blueprint Engine
+- **[Architecture Engine](../architecture/Overview)** — platform and systems notes → `/architecture`
+- **[Playbook Engine](../playbook/Overview)** — step-by-step guides → `/playbooks`
+- **[12 Weeks Plan](./Weeks-Plan)** — three-phase schedule

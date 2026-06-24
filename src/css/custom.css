@@ -158,3 +158,24 @@ button.gain-sidebar__link {
     font-size: 1.0625rem;
   }
 }
+
+/* G.A.I.N — mermaid diagram frames */
+.gain-mermaid {
+  margin: 1.5rem 0 2rem;
+  padding: 1.25rem 0.75rem;
+  border: 1px solid var(--gain-border);
+  border-radius: 12px;
+  background: var(--ifm-background-color);
+  overflow-x: auto;
+}
+
+.gain-mermaid .mermaid {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+.gain-mermaid svg {
+  max-width: 100%;
+  height: auto;
+}

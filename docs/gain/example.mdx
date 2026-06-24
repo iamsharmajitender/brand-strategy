@@ -1,0 +1,84 @@
+---
+sidebar_position: 35
+slug: Example
+title: Example
+description: Worked examples of G.A.I.N Signature Articles for jitendersharma.dev/frameworks.
+---
+
+# G.A.I.N Example
+
+Worked examples for [Signature Articles](./Types). Planning block and structure → [Template](./Template) · channel rules → [Gain Engine](./Overview).
+
+---
+
+## Worked example — G.A.I.N LLM
+
+Live at [/frameworks/gain-llm](https://jitendersharma.dev/frameworks/gain-llm):
+
+| | |
+| --- | --- |
+| **Route** | `/frameworks/gain-llm` |
+| **Dominant pillars** | **G** · **N** |
+| **One-line angle** | The LLM is a governed inference service, not a chat endpoint you paste into every workflow. |
+| **Opening thesis** | Enterprise teams debate model brands. G.A.I.N LLM reframes: which model, for which task, under which policy, at what cost — with observability and rollback from day one. |
+
+### Domain on one page
+
+```text
+Client -> Gateway (auth, policy, route) -> Model pool -> Log/trace -> Feedback
+```
+
+### Pillar map
+
+| Pillar | What the article covers |
+| --- | --- |
+| **G** · Grounded | Model registry, governed prompt/context pipeline, policy-tied input/output filters |
+| **A** · Adaptive | Per-use-case eval suites, canary releases, production feedback into routing |
+| **I** · Intelligent | Router decides which model and whether to answer; unified gateway for tools/agents |
+| **N** · Native | LLM gateway (auth, cost attribution), caching, multi-region, full trace |
+
+### Dominant pillar — Grounded (G) sample
+
+**Patterns:** Model registry with approved models per use case; governed context pipeline before inference.
+
+**Decisions:** Route by task and policy, not by brand preference; filter outputs at the gateway, not in the prompt.
+
+**Anti-patterns:** Treating the chat endpoint as the production integration point; swapping models without rollback paths.
+
+---
+
+## Worked example — G.A.I.N RAG
+
+| | |
+| --- | --- |
+| **Route** | `/frameworks/gain-rag` |
+| **Dominant pillar** | **G** |
+| **One-line angle** | RAG is a governed knowledge pipeline, not a vector database bolt-on. |
+| **Opening thesis** | Enterprise RAG fails when teams optimize retrieval and skip ingestion, access control, and the feedback loop. |
+
+### Domain on one page
+
+```text
+Source docs -> Ingest/chunk -> Embed/index -> Retrieve (policy-scoped) -> Generate -> Audit
+```
+
+### Pillar map
+
+| Pillar | What the article covers |
+| --- | --- |
+| **G** · Grounded | Ingestion, chunking, metadata, citation, hallucination controls |
+| **A** · Adaptive | Query feedback, re-indexing, eval on retrieval quality |
+| **I** · Intelligent | Query routing, hybrid search, RAG vs fine-tuning vs agents |
+| **N** · Native | Pipeline ops, latency, retention, compliance-ready audit |
+
+### Dominant pillar — Grounded (G) sample
+
+**Patterns:** Versioned indexes; citation-backed context packs; identity-scoped retrieval.
+
+**Decisions:** Ingestion and access control before vector DB choice; eval on retrieval recall, not generation fluency alone.
+
+**Anti-patterns:** Bolt-on vector DB with no ingestion pipeline; treating similarity as truth or authorization.
+
+**Blueprint sibling:** [RAG Architecture](https://jitendersharma.dev/blueprints/rag-architecture).
+
+**Related:** [Gain Engine](./Overview) · [Types](./Types) · [Template](./Template) · [Blueprint Engine](../blueprint/Overview)

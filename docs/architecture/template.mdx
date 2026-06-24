@@ -1,0 +1,61 @@
+---
+sidebar_position: 30
+slug: Template
+title: Template
+description: Planning block, page structure, and publish checklist for architecture notes on jitendersharma.dev/architecture.
+---
+
+# Architecture Template
+
+Use when **planning or drafting** an architecture note on [/architecture](https://jitendersharma.dev/architecture). Categories → [Types](./Types) · channel rules → [Architecture Engine](./Overview) · worked example → [Example](./Example).
+
+:::info[Not an Insight]
+Untagged durable reference page — no Core pillar tag, no primary voice tag, no weekly cadence.
+:::
+
+---
+
+## Planning block
+
+```text
+Note: [Architecture topic]
+Route: /architecture/[slug]
+Category: [Distributed systems / Event-driven / API design / AI systems / Governance]
+One-line angle: [what this note helps architects decide]
+Design principles: [3-5 bullets]
+Key patterns: [microservices · EDA · CQRS · ...]
+May draw from: [Insight titles — optional]
+Blueprint sibling: [/blueprints/... — optional]
+Status: 💡 Idea | 📋 Planned | 📝 Draft | ✅ Live
+```
+
+---
+
+## Page structure (published MDX)
+
+```text
+1. Title + subtitle — architectural scope, not marketing
+2. Section lead — why this matters at enterprise scale
+3. Design principles — 3-5 named, citeable principles
+4. Architecture flow — one diagram or layer table
+5. Key patterns — table: pattern | what it covers
+6. Enterprise implications — blast radius · consistency · golden paths
+7. Related assets — Insights · Blueprint sibling · G.A.I.N
+```
+
+---
+
+## Before publishing
+
+- [ ] **Untagged** — no Core pillar or voice tags
+- [ ] **Category** chosen
+- [ ] **Subtitle** states enterprise scope, not a tutorial intro
+- [ ] **3-5 design principles**, named and citeable
+- [ ] At least one **diagram or layer table**
+- [ ] **Key patterns** table is citeable, not generic
+- [ ] **Enterprise implications** present
+- [ ] **No em dashes** in prose, tables, or mermaid
+- [ ] Cross-links to related Insights and Blueprint sibling
+- [ ] Listed in [Types catalog](./Types)
+
+**Related:** [Architecture Engine](./Overview) · [Types](./Types) · [Example](./Example) · [Blueprint Engine](../blueprint/Overview)

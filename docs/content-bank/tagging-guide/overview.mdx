@@ -1,0 +1,166 @@
+---
+sidebar_position: 10
+slug: Tagging-Guidelines-for-Insights
+title: Tagging Guidelines
+description: Tagging rules for Insights, G.A.I.N, Blueprints, Architecture notes, and Playbooks on jitendersharma.dev.
+---
+
+# Tagging Guidelines
+
+How every asset type gets tagged before you ship. **Insights** carry voice and LinkedIn pairing. **G.A.I.N · Blueprint · Architecture · Playbook** carry **Core pillar + topic tags** only.
+
+**Backlog:** [Content Bank](../Content-Bank) · [Master content bank](../Content-Bank#master-content-bank)
+
+---
+
+## At a glance
+
+| Asset type | Route | Core pillar | Primary voice | Topic tags | LinkedIn | Rule |
+| --- | --- | --- | --- | --- | --- | --- |
+| **Insight** | `/insights` | **One** (required) | **One** (required) | **One or more** (required) | **One per Insight** (same tags) | Proof · cadence content |
+| **LinkedIn voice post** | LinkedIn | Same as Insight | Same as Insight | Same as Insight | — | Not a separate backlog |
+| **G.A.I.N** | `/frameworks/gain-*` | **One** (required) | — | **One or more** (required) | — | Optional in depth stack |
+| **Blueprint** | `/blueprints` | **One** (required) | — | **One or more** (required) | — | How to model |
+| **Architecture** | `/architecture` | **One** (required) | — | **One or more** (required) | — | How to architect |
+| **Playbook** | `/playbooks` | **One** (required) | — | **One or more** (required) | — | How to build |
+
+:::tip[The rules in one line]
+**Insight:** one Core pillar · one voice · one or more topics · one LinkedIn post.
+
+**G.A.I.N · Blueprint · Architecture · Playbook:** one Core pillar · one or more topics · **no voice tag**.
+:::
+
+:::info[Inherit from the topic stack]
+Depth assets share tags with their [stack topic row](../Content-Bank#master-content-bank). When an Insight proves *RAG is Not a Database* under **AI & Intelligence** with topic `rag`, **G.A.I.N RAG**, **RAG Architecture**, **enterprise RAG architecture note**, and **Build Enterprise RAG** all use the same Core pillar and `rag` topic unless a second topic clearly applies.
+:::
+
+---
+
+**Core pillar catalog:** [Core Pillars](./core-pillars) — four domain slugs shared by all tagged asset types.
+
+**Topic catalog:** [Topic Tags](./topic-tags) — seventeen cross-cutting slugs shared by all tagged asset types.
+
+**Voice catalog:** [Voice Tags](./voice-tags) — four primary voices for Insights only.
+
+---
+
+## Insights
+
+Insights are the only asset type with a **primary voice** and a **LinkedIn pair**.
+
+### What to tag
+
+| Tag | Rule | Values |
+| --- | --- | --- |
+| **Core pillar** | Exactly one | [Core pillar catalog](./core-pillars) |
+| **Primary voice** | Exactly one | [Voice catalog](./voice-tags) |
+| **Topic tags** | One or more | [Topic catalog](./topic-tags) |
+| **LinkedIn post** | One per Insight | Same Core pillar, voice, and topics |
+
+Voice is how the **Insight reads** on site. The paired **LinkedIn post uses the same voice and the same tags**. Templates → [Voice Tags](./voice-tags).
+
+### LinkedIn (one per Insight)
+
+- Same **Core pillar**, **primary voice**, and **topic tags** as the parent Insight
+- Shorter format · always **link back** to the Insight on site
+- Plan when you plan the Insight · publish after the Insight goes live
+
+### Site frontmatter (Insights)
+
+| Planning tag | Site frontmatter |
+| --- | --- |
+| Core pillar | `domain` tag (slug) |
+| Primary voice | `type` tag (slug) |
+| Topic tags | `topic` tags (slugs) |
+
+---
+
+## G.A.I.N · Blueprint · Architecture · Playbook
+
+Depth assets in the [content stack](../Content-Bank#how-each-insight-stacks). **Not Insights** — no voice tag, no LinkedIn.
+
+### What to tag
+
+| Tag | Rule |
+| --- | --- |
+| **Core pillar** | Exactly one — match the parent topic stack or anchor Insight |
+| **Topic tags** | One or more — match the topic domain (e.g. `rag`, `agents`) |
+| **Primary voice** | **Do not tag** |
+| **LinkedIn** | **Do not create** — only Insights get LinkedIn posts |
+
+### G.A.I.N planning note
+
+Signature Articles also carry a **G.A.I.N pillar letter** (`G` · `A` · `I` · `N`) for framework planning. That is **not** a Core pillar and **not** a site voice tag. Catalog → [G.A.I.N Types](../../gain/Types).
+
+### Site frontmatter (depth assets)
+
+| Planning tag | Site frontmatter |
+| --- | --- |
+| Core pillar | `domain` tag (slug) |
+| Topic tags | `topic` tags (slugs) |
+
+---
+
+## Examples
+
+### Insight — Policy-Governed Agent Runtime
+
+| Asset | Core pillar | Voice | Topics |
+| --- | --- | --- | --- |
+| Insight | Governance & Trust | `arch` | `agents` · `policy` · `compliance` · `llm` |
+| LinkedIn | Governance & Trust | `arch` | `agents` · `policy` · `compliance` · `llm` |
+
+### Depth stack — RAG topic
+
+| Asset | Core pillar | Voice | Topics |
+| --- | --- | --- | --- |
+| Insight (*RAG is Not a Database*) | AI & Intelligence | `pov` | `rag` |
+| Insight (*RAG pipeline, layer by layer*) | AI & Intelligence | `arch` | `rag` |
+| G.A.I.N RAG | AI & Intelligence | — | `rag` |
+| RAG Architecture blueprint | AI & Intelligence | — | `rag` |
+| Enterprise RAG architecture note | AI & Intelligence | — | `rag` |
+| Build Enterprise RAG playbook | AI & Intelligence | — | `rag` |
+
+Same Core pillar across the stack · different voices only on Insights · each Insight still gets its own LinkedIn post.
+
+### Published Insights (reference)
+
+| Insight | Core pillar | Voice | Topics |
+| --- | --- | --- | --- |
+| [Hallucinations Is a System Design Problem](https://jitendersharma.dev/insights/hallucinations-is-a-system-design-problem-not-model-problem) | AI & Intelligence | `pov` | `llm` · `hallucinations` |
+| [How LLM Works Under the Hood](https://jitendersharma.dev/insights/how-llm-work-under-the-hood) | Strategy & Architecture | `exp` | `llm` |
+| [Policy-Governed Agent Runtime](https://jitendersharma.dev/insights/policy-governed-agent-runtime) | Governance & Trust | `arch` | `agents` · `policy` · `compliance` · `llm` |
+| [AI Observability in Enterprise](https://jitendersharma.dev/insights/ai-observability-in-enterprise) | Platforms & Engineering | `exp` | `observability` |
+
+---
+
+## Pre-planning checklist
+
+### Insight
+
+- [ ] **One Core pillar** — [catalog](./core-pillars)
+- [ ] **One primary voice** — [catalog](./voice-tags)
+- [ ] **One or more topic tags** — [catalog](./topic-tags)
+- [ ] **One LinkedIn voice post** planned (same tags)
+- [ ] Listed in [Content Bank](../Content-Bank) with **Stack topic** when applicable
+
+### G.A.I.N · Blueprint · Architecture · Playbook
+
+- [ ] **One Core pillar** (inherit from topic stack or anchor Insight)
+- [ ] **One or more topic tags**
+- [ ] **No voice tag**
+- [ ] Row updated in [Master content bank](../Content-Bank#master-content-bank)
+
+---
+
+## Weekly workflow
+
+```text
+Monday     → Lock Tue + Thu Insights · Core pillar + voice + topics
+Tuesday    → Publish Insight · tag on site · LinkedIn post next day
+Wednesday  → Publish LinkedIn voice post (same tags · link back)
+Thursday   → Publish second Insight · tag on site
+Friday     → LinkedIn for Thu Insight · tag depth assets in stack (Core pillar + topics)
+```
+
+**Related:** [Content Bank](../Content-Bank) · [Core Pillars](./core-pillars) · [Topic Tags](./topic-tags) · [Voice Tags](./voice-tags) · [12 Weeks Plan](../Weeks-Plan) · [Insight Engine](../../insight/Overview) · [G.A.I.N Types](../../gain/Types)

@@ -1,0 +1,42 @@
+---
+sidebar_position: 30
+slug: topic-tags
+title: Topic Tags
+description: Cross-cutting topic tag catalog for Insights, G.A.I.N, Blueprints, Architecture notes, and Playbooks on jitendersharma.dev.
+---
+
+# Topic Tags
+
+Cross-cutting themes for search and discovery — shared by **all tagged asset types**. Source of truth on site: [`tags.yml`](https://github.com/iamsharmajitender/architects-handbook/blob/main/docs/insights/tags.yml).
+
+**Rule:** at least **one topic tag** on every Insight and every depth asset. Add every topic that helps a reader find the piece.
+
+**Tagging rules:** [Tagging Guidelines](./Tagging-Guidelines-for-Insights) · **Master list:** [Content Bank](../Content-Bank#master-content-bank)
+
+| Slug | Topic | Definition | G.A.I.N | Tag when the piece mainly proves… |
+| --- | --- | --- | --- | --- |
+| `rag` | **RAG** | Retrieval-augmented generation, grounding, enterprise retrieval pipelines | **G** | Context construction, indexing, retrieval quality |
+| `agents` | **Agents** | Agent orchestration, tool use, and governed autonomy | **I** | Policy-governed runtimes, agent execution, decision systems |
+| `mcp` | **MCP** | Model Context Protocol and governed tool integration | **I** | Tool registries, MCP setup, enterprise tool boundaries |
+| `llm` | **LLM** | Large language models — inference, routing, serving, cost | **G** · **N** | How models work, production LLM patterns, gateways |
+| `observability` | **Observability** | Monitoring, tracing, and operational visibility for AI systems | **N** | Telemetry capture, replay, production readiness |
+| `evaluation` | **Evaluation** | Eval harnesses, benchmarks, quality gates, rollout feedback | **A** | Field patterns, eval design, what changed in production |
+| `policy` | **Policy** | Policy engines, governance, and runtime enforcement | **I** · **G** | PEP/PDP, guardrails, where policy executes |
+| `hallucinations` | **Hallucinations** | Grounding, validation, and design patterns to reduce unsupported claims | **G** | Truth vs fluency, verification, abstention |
+| `compliance` | **Compliance** | Regulatory, audit, and operational resilience for AI systems | **I** · **N** | Audit trails, regulated-industry stakes, access control |
+| `prompt` | **Prompt** | Prompting as context architecture — design, budgeting, grounding inputs | **G** | Context windows, prompt vs FT, grounding through prompts |
+| `identity` | **Identity** | Auth, access control, and identity boundaries for LLM and agent systems | **I** · **N** | Who may retrieve or act, RAG access control, G.A.I.N Identity |
+| `memory` | **Memory** | Agent memory patterns — short-term, long-term, episodic, session state | **I** | Multi-turn assistants, memory model blueprint |
+| `orchestration` | **Orchestration** | Wiring LLM, RAG, agents, policy, and downstream systems end to end | **I** · **N** | Reference architectures, banking stacks, mixed pipelines |
+| `data` | **Data** | Data pipelines for AI — ingestion, transformation, embedding, feature stores | **G** · **N** | Data pipelines playbook, embeddings, legacy data paths |
+| `fine-tuning` | **Fine-tuning** | Model adaptation, FT vs RAG tradeoffs, when FT is actually needed | **G** · **A** | Decision model, FT overuse, domain-specific adaptation |
+| `integration` | **Integration** | Connecting AI to legacy cores, APIs, event-driven platforms | **N** | Core modernization, survival guides, enterprise connectivity |
+| `cost` | **Cost** | Token economics, routing, latency budgets, LLM spend at scale | **N** | Cost breakdowns, gateways, production efficiency |
+
+**G.A.I.N column** = typical framework letter for planning — not a site tag. Full G.A.I.N catalog → [G.A.I.N Types](../../gain/Types).
+
+**Not topic tags:** Core pillars (`strategy-architecture`, etc.) → [Core Pillars](./core-pillars) · voice (`pov`, `lrn`, `arch`, `exp`) → [Voice Tags](./voice-tags) · `gain` (framework tag, not a topic).
+
+:::info[Site sync]
+Nine tags are live in [`tags.yml`](https://github.com/iamsharmajitender/architects-handbook/blob/main/docs/insights/tags.yml) today. **New slugs** (`prompt`, `identity`, `memory`, `orchestration`, `data`, `fine-tuning`, `integration`, `cost`) are approved for planning here — add them to `tags.yml` on site before publishing with those tags.
+:::

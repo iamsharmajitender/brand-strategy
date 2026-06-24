@@ -35,6 +35,12 @@ const config: Config = {
     ],
   ],
 
+  themes: ['@docusaurus/theme-mermaid'],
+
+  markdown: {
+    mermaid: true,
+  },
+
   themeConfig: {
     image: 'img/jitender-sharma-social.png',
     colorMode: {
@@ -66,7 +72,7 @@ const config: Config = {
             },
             {
               label: 'Insights',
-              to: '/docs/50 insight/Overview',
+              to: '/docs/insight/Overview',
             },
           ],
         },
@@ -102,6 +108,9 @@ const config: Config = {
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
+    },
+    mermaid: {
+      theme: {light: 'default', dark: 'dark'},
     },
   } satisfies Preset.ThemeConfig,
 };
