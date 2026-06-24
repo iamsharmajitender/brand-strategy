@@ -1,0 +1,121 @@
+---
+sidebar_position: 30
+slug: Example-GAIN-Agents
+title: Example — G.A.I.N Agents
+description: Worked example Signature Article — policy-governed agent runtimes through G.A.I.N.
+---
+
+# Example — G.A.I.N Agents
+
+A full **Signature Article** using the [Template & Example](../Template-Example) structure. Live draft at [/frameworks/gain-agents](https://jitendersharma.dev/frameworks/gain-agents).
+
+:::info[Not an Insight]
+Dominant pillar **I** (Intelligent) — agents are decision systems, not chatbots with tools.
+:::
+
+| | |
+| --- | --- |
+| **Route** | `/frameworks/gain-agents` |
+| **Dominant pillar** | **I** (Intelligent) |
+| **Status** | 📝 Draft |
+| **May draw from** | [Policy-Governed Agent Runtime](https://jitendersharma.dev/insights/tags/agents) Insight |
+
+**Compare with:** [Example — G.A.I.N RAG](./Example-GAIN-RAG) — RAG grounds knowledge; **agents orchestrate actions** under policy.
+
+---
+
+## One-line angle
+
+Agents are policy-governed decision runtimes — not autonomous loops with API keys.
+
+## Opening thesis
+
+Enterprise agent hype focuses on autonomy. G.A.I.N Agents focuses on **governed orchestration**: explicit planning boundaries, tool registries, policy gates, and audit trails — so agents scale in regulated environments.
+
+---
+
+## Why this domain needs G.A.I.N
+
+Agents multiply risk faster than chat:
+
+- Every tool call is a potential compliance event
+- Every plan step needs traceability
+- Every escalation path must be designed — not improvised
+
+An Insight argues *where guardrails execute*. This article maps the **full agent architecture** through G.A.I.N.
+
+---
+
+## Grounded (G)
+
+**Patterns**
+
+- Tool allowlists per role, tenant, and use case — not open-ended function calling
+- Context assembly from authorized sources only (RAG, APIs, memory — all scoped)
+- Ground truth for "what happened" — immutable action log
+
+**Anti-patterns**
+
+- Agents with direct database write access
+- Tool definitions scattered across prompts
+
+---
+
+## Adaptive (A)
+
+- Eval harnesses for plan quality, tool selection accuracy, escalation rate
+- Shadow mode: agent plans but human approves actions in early rollout
+- Production overrides feed policy updates — not silent prompt patches
+
+---
+
+## Intelligent (I) — dominant
+
+**Runtime flow**
+
+```text
+Request → Planner → Policy gate → Tool registry → Execute → Audit → Response
+                ↓                      ↓
+           Human review          Deny / escalate
+```
+
+**Patterns**
+
+- **Planning vs execution separation** — plan is inspectable before tools run
+- **Policy gates** at every tool boundary — business rules, not LLM judgment
+- **Decision model integration** — when to automate vs escalate (see [Decision Model blueprint](https://jitendersharma.dev/blueprints/decision-model))
+- **Workflows vs autonomy** — most "agents" in production are governed workflows
+
+**Decisions**
+
+- Human-in-the-loop is an architecture slot — not a UI checkbox
+- Memory tiers: session · episodic · long-term — each with retention policy
+
+---
+
+## Native (N)
+
+- Horizontal scale of stateless planners · durable workflow engine for execution
+- Observability: plan steps, tool args, policy outcomes, latency per step
+- Cost caps and circuit breakers on tool-heavy paths
+
+---
+
+## Insight vs this article
+
+| Insight (one argument) | Signature Article (full domain map) |
+| --- | --- |
+| *Policy-Governed Agent Runtime* — where guardrails execute | **G.A.I.N Agents** — full runtime · tools · memory · escalation |
+| *Human-in-the-loop is an architecture decision* | How HITL fits the **I** layer by design |
+
+---
+
+## Related assets
+
+| Asset | Link |
+| --- | --- |
+| Anchor Insight | [Policy-Governed Agent Runtime](https://jitendersharma.dev/insights/tags/agents) |
+| Blueprint | [Agent Flow Model](https://jitendersharma.dev/blueprints/agent-flow-model) |
+| Playbook (later) | [Agentic Systems Design](https://jitendersharma.dev/playbooks/agentic-systems-design) |
+
+**Related:** [Example — G.A.I.N LLM](./Example-GAIN-LLM) · [Example — G.A.I.N RAG](./Example-GAIN-RAG) · [Types](../Types)

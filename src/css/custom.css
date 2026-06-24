@@ -1,0 +1,160 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #2e8555;
+  --ifm-color-primary-dark: #29784c;
+  --ifm-color-primary-darker: #277148;
+  --ifm-color-primary-darkest: #205d3b;
+  --ifm-color-primary-light: #33925d;
+  --ifm-color-primary-lighter: #359962;
+  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  --gain-blue: #3b82f6;
+  --gain-blue-dark: #2563eb;
+  --gain-blue-light: #eff6ff;
+  --gain-navy: #0b121e;
+  --gain-purple: #a855f7;
+  --gain-green: #22c55e;
+  --gain-orange: #f97316;
+  --gain-sidebar-bg: #f8fafc;
+  --gain-border: #e2e8f0;
+  --gain-text: #1e293b;
+  --gain-text-muted: #64748b;
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #25c2a0;
+  --ifm-color-primary-dark: #21af90;
+  --ifm-color-primary-darker: #1fa588;
+  --ifm-color-primary-darkest: #1a8870;
+  --ifm-color-primary-light: #29d5b0;
+  --ifm-color-primary-lighter: #32d8b4;
+  --ifm-color-primary-lightest: #4fddbf;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+
+  --gain-text: #e2e8f0;
+  --gain-text-muted: #94a3b8;
+  --gain-blue-light: rgba(59, 130, 246, 0.15);
+  --gain-sidebar-bg: #111827;
+  --gain-border: #374151;
+}
+
+.gain-sidebar {
+  width: 300px;
+  flex-shrink: 0;
+  padding: 1rem;
+  border-right: 1px solid var(--gain-border);
+  background: var(--gain-sidebar-bg);
+}
+
+.gain-sidebar__label {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gain-text-muted);
+  padding: 0.25rem 1rem 0.5rem;
+}
+
+.gain-sidebar__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.gain-sidebar__link {
+  display: block;
+  padding: 0.625rem 1rem;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  border-radius: 6px;
+  color: var(--gain-text);
+  text-decoration: none;
+}
+
+button.gain-sidebar__link {
+  width: 100%;
+  border: none;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+  font: inherit;
+}
+
+.gain-sidebar__link:hover {
+  text-decoration: none;
+  color: var(--gain-blue);
+}
+
+.gain-sidebar__link--active {
+  background-color: var(--gain-blue-light);
+  color: var(--gain-blue);
+  font-weight: 600;
+}
+
+[data-theme='dark'] .gain-sidebar__link--active {
+  background-color: rgba(59, 130, 246, 0.15);
+  color: #93c5fd;
+}
+
+.gain-doc-header {
+  margin-bottom: 2.5rem;
+}
+
+.gain-doc-title {
+  font-size: 2.75rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+  line-height: 1.15;
+}
+
+.gain-doc-subtitle {
+  font-size: 1.25rem;
+  color: var(--gain-text-muted);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.gain-doc-intro {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.gain-doc-photo {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid var(--gain-border);
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
+}
+
+[data-theme='dark'] .gain-doc-photo {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 576px) {
+  .gain-doc-intro {
+    gap: 1rem;
+  }
+
+  .gain-doc-photo {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .gain-doc-subtitle {
+    font-size: 1.0625rem;
+  }
+}

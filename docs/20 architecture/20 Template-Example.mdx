@@ -1,0 +1,81 @@
+---
+sidebar_position: 20
+slug: Template-Example
+title: Template & Example
+description: Planning template and Distributed Systems worked example for architecture notes on jitendersharma.dev/architecture.
+---
+
+# Architecture Template & Example
+
+Use when **planning or drafting** an architecture note on [/architecture/*](https://jitendersharma.dev/architecture). Type catalog → **[Types](./Types)**.
+
+---
+
+## Planning block
+
+```text
+Note: [Architecture topic]
+Route: /architecture/[slug]
+Category: [Distributed systems / Event-driven / API design / AI systems / Governance]
+One-line angle: [what this note helps architects decide]
+Design principles: [3–5 bullets]
+Key patterns: [microservices · EDA · CQRS · …]
+May draw from: [Insight titles — optional]
+Status: 📋 Planned
+```
+
+---
+
+## Page structure
+
+Match live site style ([Distributed Systems draft](https://jitendersharma.dev/architecture/distributed-systems)):
+
+```text
+1. Title + subtitle — architectural, not marketing
+2. Section lead — why this matters at enterprise scale
+3. Design principles checklist (left) + architecture diagram (right)
+4. Key patterns — accordion or short sections per pattern
+5. Related Insights · Blueprints · G.A.I.N (optional)
+```
+
+---
+
+## Worked example — Distributed Systems
+
+From [jitendersharma.dev/architecture/distributed-systems](https://jitendersharma.dev/architecture/distributed-systems):
+
+**Subtitle:** Building resilient, scalable, and observable systems.
+
+**Section lead:** Modern systems rarely run on a single machine. As load, team size, and integration complexity grow, distributed architecture becomes the baseline — and the design choices you make early determine whether the system scales gracefully or becomes fragile under pressure.
+
+**Design principles:**
+
+- Loose coupling
+- High cohesion
+- Fault tolerance
+- Observability by default
+- Event-driven execution
+
+**Key patterns:**
+
+| Pattern | What it covers |
+| --- | --- |
+| **Microservices** | Independently deployable services with bounded contexts |
+| **Event-Driven Architecture** | Events as primary integration — async, resilient |
+| **CQRS** | Separate read and write models at scale |
+| **Saga Pattern** | Distributed transactions via compensating actions |
+| **Observability** | Metrics, logs, tracing from day one — not an afterthought |
+
+**Diagram flow (site):** Client → API Gateway → Services → Event Bus → Data Stores
+
+---
+
+## Before publishing
+
+- [ ] Subtitle states enterprise scope — not a tutorial intro
+- [ ] At least one diagram or layer table
+- [ ] Key patterns are citeable — not generic bullet fluff
+- [ ] Cross-links to related Insights (if any)
+- [ ] Listed in [Types](./Types) catalog
+
+**Related:** [Architecture Engine Overview](./Overview) · [Types](./Types)

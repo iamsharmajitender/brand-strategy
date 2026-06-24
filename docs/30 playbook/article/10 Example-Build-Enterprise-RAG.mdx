@@ -1,0 +1,86 @@
+---
+sidebar_position: 10
+slug: Example-Build-Enterprise-RAG
+title: Example — Build Enterprise RAG
+description: Worked example playbook — production RAG implementation on /playbooks/build-enterprise-rag.
+---
+
+# Example — Build Enterprise RAG
+
+A full **playbook** using the [Template & Example](../Template-Example) structure. Live draft at [/playbooks/build-enterprise-rag](https://jitendersharma.dev/playbooks/build-enterprise-rag).
+
+:::info[Ships last]
+Playbooks assume the reader accepts the pattern — anchor Insight and Blueprint should be live first.
+:::
+
+| | |
+| --- | --- |
+| **Route** | `/playbooks/build-enterprise-rag` |
+| **G.A.I.N pillar** | **G** (Grounded) |
+| **Status** | 📝 Draft |
+| **Prerequisite** | RAG pipeline Insight · [RAG Architecture](https://jitendersharma.dev/blueprints/rag-architecture) blueprint |
+
+---
+
+## Subtitle
+
+A step-by-step playbook to build production-ready RAG systems at scale.
+
+---
+
+## Implementation roadmap
+
+| Stage | Step | Outcome |
+| --- | --- | --- |
+| **1** | Define the Use Case | Problem, audience, and success metrics locked |
+| **2** | Data Ingestion | Collect, clean, structure, and classify source documents |
+| **3** | Index & Retrieval | Indexes built · retrieval tuned · access control applied |
+| **4** | Generation Layer | LLMs integrated with grounded, policy-scoped context |
+| **5** | Evaluation & Monitoring | Quality, latency, cost, and drift measured |
+| **6** | Operate & Improve | Feedback loops · re-embed · rollback paths |
+
+---
+
+## Key practices
+
+**Start with evaluation criteria**
+
+Define what "good" means before choosing vector DB or model. Offline eval sets per use case — not one generic benchmark.
+
+**Instrument from day one**
+
+Log every query, retrieval set, policy decision, and generation. You cannot debug RAG in production without retrieval traces.
+
+**Iterate on retrieval first**
+
+Most RAG failures are retrieval problems — chunking, metadata, re-ranking, access scope — not prompt engineering.
+
+**Do not**
+
+- Ship without identity-scoped retrieval in regulated environments
+- Treat similarity score as confidence
+- Skip shadow mode before full rollout
+
+---
+
+## Stage detail — Index & Retrieval (Stage 3)
+
+```text
+Source docs → Parse/chunk → Embed → Index (versioned)
+                    ↓
+User query → Embed → Filter by policy → Retrieve top-k → Re-rank → Context pack
+```
+
+**Exit criteria:** Retrieval recall measured on eval set · P95 latency within SLO · access control verified on test identities.
+
+---
+
+## Related assets
+
+| Asset | Link |
+| --- | --- |
+| Anchor Insight | A production RAG pipeline, layer by layer |
+| Blueprint | [RAG Architecture](https://jitendersharma.dev/blueprints/rag-architecture) |
+| Signature Article | [G.A.I.N RAG](https://jitendersharma.dev/frameworks/gain-rag) |
+
+**Related:** [Playbook Engine Overview](../Overview) · [Template & Example](../Template-Example) · [Types](../Types)

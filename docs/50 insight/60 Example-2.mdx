@@ -1,0 +1,109 @@
+---
+sidebar_position: 30
+slug: Example-2
+title: Example 2 — Agents
+description: Worked example — A reference architecture for governed agentic AI systems.
+---
+
+# Example 2 — Agents
+
+A full Insight using the [Insight Engine template](./Overview), applied to governed agentic AI systems (G.A.I.N perspective).
+
+---
+
+## Title
+
+**A Reference Architecture for Governed Agentic AI Systems (G.A.I.N Perspective)**
+
+---
+
+## 1. Context
+
+As enterprises move from simple LLM usage to agentic systems, complexity increases exponentially.
+
+Agents are being designed to:
+
+- Call tools
+- Make decisions
+- Chain workflows
+- Interact with enterprise systems
+
+But most implementations lack system-level governance, leading to unpredictable behavior at scale.
+
+---
+
+## 2. System View
+
+A governed agentic system should not be model-centric. Instead, it should follow this structure:
+
+**Request flow:**
+
+```text
+User → Identity Layer → Policy Engine → Context Builder → Agent Orchestrator → Tools / APIs → Observability Layer
+```
+
+**Key separation:**
+
+| Layer | Responsibility |
+| --- | --- |
+| Identity | Not the prompt |
+| Policy | Not model behavior |
+| Tools | Not intelligence |
+| Observability | Not logging |
+
+Each layer has a distinct responsibility.
+
+---
+
+## 3. Key Design Decisions
+
+**Critical design shifts:**
+
+- Identity is resolved at the edge, not inside the LLM
+- Policy evaluation happens before and after model execution
+- Agents are planners, not authority holders
+- Tool execution is deterministic and auditable
+- LLM outputs are treated as proposals, not decisions
+
+---
+
+## 4. Principles
+
+- Never let LLMs own decision authority
+- Identity must precede context construction
+- Policy enforcement is external to AI systems
+- Agents orchestrate — they do not govern
+- Every action must be traceable end-to-end
+
+---
+
+## 5. Enterprise Implications
+
+**With this architecture:**
+
+- AI systems become auditable
+- Compliance becomes enforceable, not assumed
+- Risk is reduced through deterministic control layers
+- Systems scale across regulated environments safely
+
+**Without it:**
+
+- Agent behavior becomes unpredictable
+- Enterprise risk increases non-linearly
+- Governance breaks at scale
+
+---
+
+## 6. Closing Insight
+
+> Agentic AI is not an intelligence problem. It is a governed systems architecture problem.
+>
+> The future belongs to systems where intelligence is constrained by design — not by hope.
+
+---
+
+## What to notice
+
+This example leans heavily on **ARC** — the system view and layer table carry most of the post. The principles and enterprise implications then extract the design truths and scale consequences.
+
+Use this pattern when your topic is inherently architectural: lead with the flow, then derive principles from the structure.

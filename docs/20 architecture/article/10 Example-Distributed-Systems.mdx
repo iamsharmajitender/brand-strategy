@@ -1,0 +1,89 @@
+---
+sidebar_position: 10
+slug: Example-Distributed-Systems
+title: Example — Distributed Systems
+description: Worked example architecture note — resilient, scalable systems on /architecture/distributed-systems.
+---
+
+# Example — Distributed Systems
+
+A full **architecture note** using the [Template & Example](../Template-Example) structure. Live draft at [/architecture/distributed-systems](https://jitendersharma.dev/architecture/distributed-systems).
+
+:::info[Not an Insight]
+Untagged reference page — durable systems note, not a weekly cadence essay.
+:::
+
+| | |
+| --- | --- |
+| **Route** | `/architecture/distributed-systems` |
+| **Category** | Distributed systems |
+| **Status** | 📝 Draft |
+| **May draw from** | AI Observability in Enterprise · platform modernization Insights |
+
+---
+
+## Subtitle
+
+Building resilient, scalable, and observable systems.
+
+## Section lead
+
+Modern systems rarely run on a single machine. As load, team size, and integration complexity grow, distributed architecture becomes the baseline — and the design choices you make early determine whether the system scales gracefully or becomes fragile under pressure.
+
+---
+
+## Design principles
+
+- **Loose coupling** — services change independently
+- **High cohesion** — bounded contexts with clear ownership
+- **Fault tolerance** — failure is expected, not exceptional
+- **Observability by default** — metrics, logs, tracing from day one
+- **Event-driven execution** — async integration where sync creates bottlenecks
+
+---
+
+## Architecture flow
+
+```text
+Client → API Gateway → Services → Event Bus → Data Stores
+              ↓
+         Observability (metrics · logs · traces)
+```
+
+---
+
+## Key patterns
+
+| Pattern | What it covers |
+| --- | --- |
+| **Microservices** | Independently deployable services with bounded contexts |
+| **Event-Driven Architecture** | Events as primary integration — async, resilient |
+| **CQRS** | Separate read and write models at scale |
+| **Saga Pattern** | Distributed transactions via compensating actions |
+| **Observability** | End-to-end tracing across service boundaries |
+
+---
+
+## Enterprise implications
+
+At enterprise scale:
+
+- Blast radius matters — isolate failures per domain
+- Data consistency is a design choice — not an accident of ORM defaults
+- Platform teams need golden paths — not every squad reinventing service mesh
+
+Without observability and clear boundaries:
+
+- Incidents become archaeology exercises
+- AI workloads amplify latency and cost unpredictably across the stack
+
+---
+
+## Related assets
+
+| Asset | Link |
+| --- | --- |
+| Blueprint sibling | [G.A.I.N Architecture](https://jitendersharma.dev/blueprints/gain-architecture) |
+| Related Insight | [AI Observability in Enterprise](https://jitendersharma.dev/insights/tags/observability) |
+
+**Related:** [Architecture Engine Overview](../Overview) · [Template & Example](../Template-Example) · [Types](../Types)

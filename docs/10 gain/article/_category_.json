@@ -1,0 +1,10 @@
+{
+  "label": "Article",
+  "position": 40,
+  "collapsible": true,
+  "collapsed": false,
+  "link": {
+    "type": "generated-index",
+    "description": "Worked Signature Article examples — each maps one domain through G · A · I · N. Start with G.A.I.N RAG, then compare dominant pillars across LLM (G·N), Agents (I), Observability (N), and Evaluation (A)."
+  }
+}

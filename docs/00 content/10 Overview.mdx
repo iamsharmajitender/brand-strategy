@@ -1,0 +1,69 @@
+---
+sidebar_position: 10
+slug: Overview
+title: Overview
+description: Content planning hub — what belongs in Insights, G.A.I.N, Blueprints, Playbooks, and the 12-week plan.
+---
+
+# Content Engine
+
+The Content Engine is your **strategic asset library** — every topic you might write about over the next 12–24 months.
+
+:::tip[How this connects]
+**Content Bank** (2 Insights/week + assets) → **12 Weeks Plan** → **Insight Engine** (publish Insights) · **Post Engine** (optional LinkedIn from research)
+:::
+
+**Insights** → one Core pillar · one primary voice · topic tags (optional) · **[Tagging Guidelines for Insights](./Tagging-Guidelines-for-Insights)**.
+
+**Framework · Blueprints · Playbooks · G.A.I.N Signature Articles** → untagged asset lists in **[Content Bank](./Content-Bank)** · article catalog in **[G.A.I.N](../10 gain/Types#gain-signature-articles)**.
+
+---
+
+## What goes where
+
+Five content types on [jitendersharma.dev](https://jitendersharma.dev). Each has a different job — do not mix channels (e.g. a Signature Article is **not** an Insight).
+
+| Asset | Route | What goes in it | Tagging | When to ship |
+| --- | --- | --- | --- | --- |
+| **Insight** | `/insights` | Long-form proof — POV, LRN, architecture breakdown, experiment write-up. One argument per piece. | **Yes** — Core pillar · primary voice · optional topics → [Tagging Guidelines](./Tagging-Guidelines-for-Insights) | **2/week** (Tue + Thu) · [Content Bank](./Content-Bank#insights) |
+| **G.A.I.N** | `/frameworks` | **Core framework** — Governed AI-Native Systems operating model (G · A · I · N loop). **Signature Articles** — standalone domain pieces (LLM · RAG · Agents · MCP · Prompt · Evaluation · Observability · Identity) each explaining the topic **through G.A.I.N**. | **No** — G.A.I.N pillar only on Signature Articles | One Signature Article at a time · [G.A.I.N catalog](../10 gain/Types#gain-signature-articles) |
+| **Blueprint** | `/blueprints` | Visual **reference models** — decision trees, layer diagrams, flows advisors cite. Decision Model · Agent Flow · Memory Model · RAG Architecture · etc. | **No** | After anchor Insight (or Signature Article) proves the pattern · [Blueprints](../40 blueprint/Types) |
+| **Architecture** | `/blueprints/*-architecture` | **Full-stack architecture blueprints** — layered enterprise models (G.A.I.N Architecture, RAG Architecture). Not prose articles; diagram + layer table + boundaries. | **No** | IP weeks (e.g. Week 10 G.A.I.N Architecture) · enrich from related Insights |
+| **Playbook** | `/playbooks` | **Step-by-step implementation** — checklists, runbooks, “how to deploy/evaluate/observe.” Assumes the reader already accepts the pattern. | **No** | After Insight + blueprint (optional) prove demand · [Content Bank → Playbooks](./Content-Bank#playbooks) |
+
+### How they stack
+
+```text
+Insight              →  tagged proof · research · cadence content
+        ↓ may inform
+G.A.I.N Signature    →  permanent domain × G.A.I.N · /frameworks/gain-*
+        ↓
+Blueprint            →  visual reference model (decision · flow · layers)
+        ↓
+Architecture blueprint →  full-stack layer diagram (when scope is enterprise-wide)
+        ↓
+Playbook             →  step-by-step implementation (optional, later)
+```
+
+**Rules of thumb**
+
+- **Insight** = “here is the argument and evidence” — publish on schedule, tag every time.
+- **G.A.I.N Signature Article** = “here is how this domain works through G.A.I.N” — permanent IP, not in the Insights backlog; may reuse Insight research.
+- **Blueprint** = “here is the model on one page” — extract from Insight or Signature Article; no duplicate long-form prose.
+- **Architecture blueprint** = “here is the full layered stack” — subset of blueprints for end-to-end system views.
+- **Playbook** = “here is how to do it” — ship last; link back to Insight, blueprint, and G.A.I.N.
+
+Core framework at [/frameworks](https://jitendersharma.dev/frameworks) is the **spine** — every Insight, Signature Article, blueprint, and playbook links back to G.A.I.N.
+
+---
+
+## Pages in this section
+
+- **[Tagging Guidelines for Insights](./Tagging-Guidelines-for-Insights)** — Core pillar, voice, and topic tags (Insights only)
+- **[Content Bank](./Content-Bank)** — Insights (tagged) · Framework · Blueprints · Playbooks · G.A.I.N (untagged)
+- **[G.A.I.N](../10 gain/Types)** — pillars · Signature Article catalog · build track → Gain Engine
+- **[Template & Example](../10 gain/Template-Example)** — planning template · worked example · publish checklist
+- **[Blueprints](../40 blueprint/Types)** — reference models and IP launch sequence → Blueprint Engine
+- **[Architecture Engine](../20 architecture/Overview)** — platform and systems notes → `/architecture`
+- **[Playbook Engine](../30 playbook/Overview)** — step-by-step guides → `/playbooks`
+- **[12 Weeks Plan](./Weeks-Plan)** — three-phase schedule
